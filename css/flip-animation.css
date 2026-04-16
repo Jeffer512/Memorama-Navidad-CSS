@@ -1,0 +1,59 @@
+#card1:checked~.cartas .selector1,
+#card2:checked~.cartas .selector2,
+#card3:checked~.cartas .selector3,
+#card4:checked~.cartas .selector4,
+#card5:checked~.cartas .selector5,
+#card6:checked~.cartas .selector6,
+#card7:checked~.cartas .selector7,
+#card8:checked~.cartas .selector8,
+#card9:checked~.cartas .selector9,
+#card10:checked~.cartas .selector10,
+#card11:checked~.cartas .selector11,
+#card12:checked~.cartas .selector12,
+#card13:checked~.cartas .selector13,
+#card14:checked~.cartas .selector14,
+#card15:checked~.cartas .selector15,
+#card16:checked~.cartas .selector16 {
+  transform: rotateY(180deg);
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+  /* Parametro de la transicion */
+  transform-style: preserve-3d;
+}
+
+.card {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.card .Cardfront,
+.card .Cardback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .Cardfront {
+  transform: rotateY(0deg);
+}
+
+.card .Cardback {
+  background-size: cover;
+  background-position: center;
+  transform: rotateY(180deg);
+}

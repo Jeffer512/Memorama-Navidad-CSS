@@ -1,0 +1,81 @@
+.container {
+    margin: auto;
+    width: 70%;
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows: auto;
+    border: 6.5px solid #E9C97C;
+    border-radius: 15px;
+    background-color: rgba(240,204,124, 0.7);
+    background-size: cover;
+    display: none;
+    align-items: center;
+    border: solid #FEC85A 8px;
+    background-image: url(../img/estrellas.png);
+    background-color: #E9C97C;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 250px;
+    z-index: 100;
+}
+
+.container img{
+    width: 100%;
+    
+}
+
+.container  h1{
+    color: #cb0d0d;
+}
+
+.container .texto{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-align: center;
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    /* Para asegurar que la imagen no sobrepase su tamaño original */
+    max-height: 100%;
+}
+
+.container .img img {
+    width: 100%;
+    height: 60%;
+    align-items: center;
+    margin-left: 5%;
+}
+
+.container .linea {
+    display: flex;
+    width: 200%;
+    padding: 3% 0;
+    align-items: center;
+    border-radius: 0 0 5px 5px;
+    background-color: #075048;
+}
+
+.container .linea img{
+    width: 3%;
+    height: auto;
+}
+
+.container .linea p {
+   color: white;
+   margin: 0;
+   margin-left: 5px;
+   margin-right: 8px ;
+}
+
+.container button {
+    box-shadow: 0px 5px 5px rgba(203, 13, 13, 0.795);
+    margin-bottom: 15px;
+    background-color: rgb(203, 13, 13);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-size: 0.8rem; 
+}

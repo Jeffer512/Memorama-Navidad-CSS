@@ -1,0 +1,183 @@
+@keyframes animation {
+  0% {
+    transform: rotate(-8deg);
+  }
+
+  10% {
+    transform: rotate(8deg);
+  }
+
+  20% {
+    transform: rotate(-8deg);
+  }
+
+  30% {
+    transform: rotate(8deg);
+  }
+
+  70% {
+    transform: rotate(-8deg);
+    transform: translateY(500px);
+  }
+}
+
+
+/* Define la animación para cambiar la opacidad */
+@keyframes controlDisplay {
+  0% {
+    opacity: 0;
+    pointer-events: all;
+  }
+  1% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  99% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+@keyframes controlOverlay {
+  0% {
+    visibility: hidden;
+  }
+  1% {
+    visibility: visible;
+  }
+  99% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+
+.main-tapas {
+  pointer-events: none; /* Asegura que todos los hijos también lo tengan */
+  opacity: 0; /* Opacidad inicial */
+  transition: opacity 0.3s ease; /* Transición suave de opacidad */
+
+}
+
+.overlay-main-tapas{
+  visibility: visible;
+  position: absolute;
+  background: hsla(0, 0%, 0%, 0.621);
+  width: 100vw;
+  height: 100vh;
+  top: -200px;
+  bottom: 0;
+  /* z-index: -1000000 ; */
+}
+
+@media (min-height: 600px) {
+  .overlay-main-tapas {
+    top: -300px;
+  }
+}
+
+
+.container-tapas {
+  display: flex;
+  pointer-events: none;
+}
+
+
+
+/* Cuando ambos cards están checked, se activa la animación */
+#card1:checked + #card2:checked ~ .m1,
+#card3:checked + #card4:checked ~ .m2,
+#card5:checked + #card6:checked ~ .m3,
+#card7:checked + #card8:checked ~ .m4,
+#card9:checked + #card10:checked ~ .m5,
+#card11:checked + #card12:checked ~ .m6,
+#card13:checked + #card14:checked ~ .m7,
+#card15:checked + #card16:checked ~ .m8 {
+  animation: controlDisplay 5s linear forwards; /* Ejecuta la animación cuando ambos checkboxes están checked */
+}
+
+#card1:checked + #card2:checked ~ .m1 ~ .overlay-main-tapas,
+#card3:checked + #card4:checked ~ .m2 ~ .overlay-main-tapas,
+#card5:checked + #card6:checked ~ .m3 ~ .overlay-main-tapas,
+#card7:checked + #card8:checked ~ .m4 ~ .overlay-main-tapas,
+#card9:checked + #card10:checked ~ .m5 ~ .overlay-main-tapas,
+#card11:checked + #card12:checked ~ .m6 ~ .overlay-main-tapas,
+#card13:checked + #card14:checked ~ .m7 ~ .overlay-main-tapas,
+#card15:checked + #card16:checked ~ .m8 ~ .overlay-main-tapas {
+  visibility: visible;
+  animation: controlOverlay 5s linear;
+}
+
+#card1:checked ~ #card2:checked ~ .main-tapas .container-tapas .mover-maria,
+#card3:checked ~ #card4:checked ~ .main-tapas .container-tapas .mover-baltazar,
+#card5:checked ~ #card6:checked ~ .main-tapas .container-tapas .mover-jose,
+#card7:checked ~ #card8:checked ~ .main-tapas .container-tapas .mover-jesus,
+#card9:checked ~ #card10:checked ~ .main-tapas .container-tapas .mover-melchor,
+#card11:checked ~ #card12:checked ~ .main-tapas .container-tapas .mover-gaspar,
+#card13:checked ~ #card14:checked ~ .main-tapas .container-tapas .mover-pastor,
+#card15:checked ~ #card16:checked ~ .main-tapas .container-tapas .mover-buey {
+  animation: animation 3s linear;
+  transform: translateY(1000px);
+}
+
+.mover-maria {
+  position: absolute;
+  width: 17.7%;
+  bottom: 0;
+  left: 1%;
+}
+
+.mover-pastor {
+  position: absolute;
+  width: 12.4%;
+  top: 19.8%;
+  left: 46.3%;
+}
+
+.mover-baltazar {
+  position: absolute;
+  width: 11.3%;
+  top: 13.5%;
+  left: 16.9%;
+}
+
+.mover-jesus {
+  position: absolute;
+  width: 14.1%;
+  bottom: 4%;
+  left: 17%;
+}
+
+.mover-jose {
+  position: absolute;
+  width: 11.4%;
+  bottom: 10.3%;
+  left: 2.9%;
+}
+
+.mover-melchor {
+  position: absolute;
+  width: 20.5%;
+  bottom: 6.3%;
+  left: 30.8%;
+}
+
+.mover-buey {
+  position: absolute;
+  width: 13.6%;
+  top: 40%;
+  left: 53.4%;
+}
+
+.mover-gaspar {
+  position: absolute;
+  width: 12.9%;
+  top: 14%;
+  left: 26.5%;
+}

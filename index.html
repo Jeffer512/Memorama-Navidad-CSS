@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Memorama</title>
+  <!-- Estilos -->
+  <link rel="stylesheet" href="./css/main_style.css" />
+  <link rel="stylesheet" href="./css/cards.css">
+  <link rel="stylesheet" href="./css/aleatoriedad.css" />
+  <link rel="stylesheet" href="./css/comparate-two-cards.css"/>
+  <link rel="stylesheet" href="./css/inicio.css" />
+  <link rel="stylesheet" href="./css/flip-animation.css" />
+  <link rel="stylesheet" href="./css/notificacion.css" />
+  <link rel="stylesheet" href="./css/header.css">
+  <link rel="stylesheet" href="./css/footer.css" />
+  <link rel="stylesheet" href="./css/started.css" />
+  <link rel="stylesheet" href="./css/window-win.css" />
+  <link rel="stylesheet" href="./css/pecebre.css"/>
+  <link rel="stylesheet" href="./css/drop-cap.css" />
+
+</head>
+<body>
+  <div><header>
+    <a class="header__container" href="index.html"><img src="img\BootCamp.png"></a>
+    <section class="header__text">
+      <h1>Armemos el pesebre de navidad</h1>
+      <p>Como es tradicion para cada diciembre armamos el pesebre para esperar la llegada del Niño Dios. Presiona cada
+        tarjeta para descubrir un personaje, concentrate y encuentra su pareja, asi revelara un personaje en el pesebre
+        y descubriras un dato curioso sobre esta tradicion de navidad.</p>
+    </section>
+  </header>
+  <main>
+    <!-- Checkbox para poder seleccionar una tarjeta -->
+    <input type="checkbox" id="card1" />
+    <input type="checkbox" id="card2" />
+    <input type="checkbox" id="card3" />  
+    <input type="checkbox" id="card4" />
+    <input type="checkbox" id="card5" />
+    <input type="checkbox" id="card6" />
+    <input type="checkbox" id="card7" />
+    <input type="checkbox" id="card8" />
+    <input type="checkbox" id="card9" />
+    <input type="checkbox" id="card10" />
+    <input type="checkbox" id="card11" />
+    <input type="checkbox" id="card12" />
+    <input type="checkbox" id="card13" />
+    <input type="checkbox" id="card14" />
+    <input type="checkbox" id="card15" />
+    <input type="checkbox" id="card16" />
+
+    <!-- Inicio del juego -->
+    <input type="checkbox" name="menu" id="main__menu" class="main__checkbox" />
+    <section class="main__intro">
+      <img class="main__intro-image" src="./img/modal-introNew.png" alt="">
+      <label for="main__menu" class="main__intro-label">
+        <strong class="main__intro-text">Comenzar</strong>
+      </label>
+    </section>
+    
+    <div class="overlay"></div>
+
+    <!-- Notificación del error cuando se selecciona tarjetas desiguales -->
+    <div class="error-notificacion">
+      <div class="notification-content">Por favor gira las cartas diferentes de nuevo para continuar</div>
+    </div>
+
+    <!-- Contenedor para indicar que se gano el juego -->
+    <section>
+      <div class="container">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+        <div class="texto">
+          <h1>Armaste tu pesebre</h1>
+          <p class="p1">Y junto con las esperanza del niño Dios te deseamos de todo corazon que ese regalo que tanto has anelado llegue a ti</p>
+          en esta navidad
+          <p class="p2">
+            Felices fiestas te desea:
+          </p>
+          <div class="img">
+            <img src="./img/BootCamp.png" alt="Logo Bootcamp">
+          </div>
+          <a href="index.html"><button>Volver a intentar</button></a>
+        </div>
+        <div class="linea">
+          <p> Compartir </p>
+          <img src="./img/modal/twitter.svg" alt="twitter">
+          <img src="./img/modal/facebook.svg" alt="facebook">
+          <img src="./img/modal/linkedin.svg" alt="linkedin">
+          <img src="./img/modal/link.svg" alt="link">
+        </div>
+      </div>
+    </section>
+    
+    <!-- Destapar el pesebre -->
+    <div class="main-tapas m1">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m2">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m3">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m4">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m5">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m6">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m7">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-tapas m8">
+      <div class="overlay-main-tapas"></div>
+      <div class="container-tapas">
+        <img class="mover-jose" src="./img/modal/jose.png" alt="jose">
+        <img class="mover-maria" src="./img/modal/maria.png" alt="maria">
+        <img class="mover-pastor" src="./img/modal/pastor.png" alt="pastor">
+        <img class="mover-baltazar" src="./img/modal/baltazar.png" alt="baltazar">
+        <img class="mover-jesus" src="./img/modal/jesus.png" alt="jesus">
+        <img class="mover-gaspar" src="./img/modal/gaspar.png" alt="gaspar">
+        <img class="mover-melchor" src="./img/modal/melchor.png" alt="melchor">
+        <img class="mover-buey" src="./img/modal/mula-buey.png" alt="mula-buey">
+        <div class="image_section">
+        <img src="./img/modal/escena-pesebre.png" alt="Pesebre">
+      </div>
+        <div class="info_section">
+          <div class="background-container">
+            <div class="text-overlay">
+              <h3>Sabías que</h3>
+              <p>A la nanita nana es un villancico compuesto por Jeremías Quintero, oriundo de Barbacoas, Nariño
+              </p>
+              <button class = "info_section_button">Espera 5 segundos...</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="falsas">
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+      <div class="container__box"><img src="./img/tarjeta_cubierta.png" alt="tarjeta cubierta"/> </div>
+    </div>
+
+    <!-- Cartas principales del juego -->
+    <div class="cartas">
+      <label for="card1" class="card selector1">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-001.png" alt="img1" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card2" class="card selector2">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-001.png" alt="img2" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card3" class="card selector3">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-006.png" alt="img3" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card4" class="card selector4">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-006.png" alt="img4" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card5" class="card selector5">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-002.png" alt="img1" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card6" class="card selector6">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-002.png" alt="img2" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card7" class="card selector7">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-003.png" alt="img3" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card8" class="card selector8">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-003.png" alt="img4" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card9" class="card selector9">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-004.png" alt="img1" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card10" class="card selector10">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-004.png" alt="img2" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card11" class="card selector11">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-005.png" alt="img3" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card12" class="card selector12">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-005.png" alt="img4" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card13" class="card selector13">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-007.png" alt="img1" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card14" class="card selector14">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-007.png" alt="img2" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card15" class="card selector15">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-008.png" alt="img3" />
+          </div>
+        </div>
+      </label>
+
+      <label for="card16" class="card selector16">
+        <div class="card-inner">
+          <div class="Cardfront">
+            <img src="./img/tarjeta_cubierta.png" />
+          </div>
+          <div class="Cardback">
+            <img src="img/parejas-008.png" alt="img4" />
+          </div>
+        </div>
+      </label>
+    </div>
+  </main>
+  <footer class="footer">
+    <span class="footer__content">
+      <p class="footer__text">Somos</p>
+      <img class="footer__img" src="img/BootCamp.png" alt="BootCamp">
+      <p class="footer__text">y te ayudamos a tranformar el aprendizaje en experiencias memorables</p>
+    </span>
+
+    <div class="footer__social">
+      <p class="footer__text">Siguenos</p>
+      <img src="img/facebookED.png" alt="facebookED" class="footer__icon">
+      <img src="img/instagramED.png" alt="instagramED" class="footer__icon">
+      <img src="img/linkedinED.png" alt="linkedinED" class="footer__icon">
+      <p class="footer__text footer__text--contacto">Contacto</p>
+    </div>
+  </footer></div>
+</body>
+
+</html>
