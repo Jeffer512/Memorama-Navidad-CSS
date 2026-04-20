@@ -2,6 +2,8 @@
 
 This project is a technical demonstration of a fully functional game and animation sequence built entirely with **HTML5 and CSS3**. It uses a memory-match mechanic to "build" a traditional Nativity scene (Pesebre) using declarative logic and **zero JavaScript**.
 
+**Deployment:** https://jeffer512.github.io/Memorama-Navidad-CSS/
+
 ## Project Origin
 This project was originally developed as a group assignment during a web development bootcamp. The original codebase was audited to remove redundant CSS selectors. Specifically, invalid general sibling combinators (~) attempting to target elements preceding the trigger in the DOM.
 
